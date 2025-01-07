@@ -67,9 +67,9 @@ const Profile = () => {
             style={{ cursor: 'pointer' }}
           >
             <div className="card" style={{ width: '100%', height: '100%' }}>
-              <div className="image" style={{ width: '100%', height: '200px' }}>
+              <div className="image bg-secondary" style={{ width: '100%', height: '200px' }}>
                 <img
-                  src={`https://avatars.dicebear.com/v2/avataaars/${user.name}.svg?options[mood][]=happy`}
+                  src={`https://api.dicebear.com/6.x/avataaars/svg?seed=${encodeURIComponent(user.name)}&mood[]=happy`}
                   className="card-img-top"
                   alt="User Avatar"
                   style={{ width: '100%', height: '180px' }}

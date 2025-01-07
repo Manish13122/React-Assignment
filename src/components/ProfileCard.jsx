@@ -2,6 +2,7 @@ import React from 'react';
 
 const ProfileCard = ({ user, onClose }) => {
   return (
+    <div className='text-center'>
     <div className="profile-card-overlay" onClick={onClose}>
       <div
         className="profile-card"
@@ -15,7 +16,7 @@ const ProfileCard = ({ user, onClose }) => {
         </div>
         <div className="profile-card-body">
           <img
-            src={`https://avatars.dicebear.com/v2/avataaars/${user.name}.svg?options[mood][]=happy`}
+            src={`https://api.dicebear.com/6.x/avataaars/svg?seed=${encodeURIComponent(user.name)}&mood[]=happy`}
             alt="User Avatar"
             className="profile-card-avatar"
           />
@@ -39,6 +40,7 @@ const ProfileCard = ({ user, onClose }) => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
